@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<!DOCTYPE html> 
+<html lang="ru">          
+  <head>
+    <title>{{ title }}</title>      
+  </head>
+  <body>       
+    <header>
+    <a class="navbar-brand" href="{% url 'group_posts' %}">
+    Страница со списком сортов мороженого
+    </a>
+      <!-- Это тег шаблонизатора include, сюда будет включён код
+      из файла includes/header.html -->
+      {% include 'includes/header.html' %}
+    </header>
+    <main>
+      {% block content %}
+      Это страница проекта для сообщений групп!
+      {% endblock %}
+    </main>
+    <footer>
+      {% include 'includes/footer.html' %} 
+    </footer>
+  </body>
+</html> 
